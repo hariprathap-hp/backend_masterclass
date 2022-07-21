@@ -1,3 +1,6 @@
+git repo:
+    -> https://github.com/techschool/simplebank
+
 migrate command
     -> migrate create -ext sql -dir db/migration -seq init_schema
 
@@ -6,3 +9,21 @@ executing migrate command
 
 Different libraries to access database from goLang?
     -> GORM, database/sql (default), sqlx, sqlc
+
+sqlc queries page
+    -> https://docs.sqlc.dev/en/latest/tutorials/getting-started-postgresql.html
+
+To save:
+--------
+func (q *Queries) UpdateAccount(ctx context.Context, arg UpdateAccountParams) (Accounts,error ){
+	row := q.db.QueryRowContext(ctx, updateAccount, arg.ID, arg.Balance)
+	var i Accounts
+	err := row.Scan(
+		&i.ID,
+		&i.Owner,
+		&i.Balance,
+		&i.Currency,
+		&i.CreatedAt,
+	)
+	return i, err
+}
