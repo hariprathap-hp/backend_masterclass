@@ -3,3 +3,6 @@ migrate command
 
 executing migrate command
     -> migrate -path db/migration -database "postgresql://postgres:postgres@localhost:8000/simple_bank?sslmode=disable" -verbose up
+
+Different libraries to access database from goLang?
+    -> GORM, database/sql (default), sqlx, sqlc
