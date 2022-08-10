@@ -1,3 +1,6 @@
+#create init files migration using below command
+#migrate create -ext sql -dir db/migration/ -seq init_schema
+
 postgres:
 	docker run --name postgres12 -p 8000:5432 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -d postgres:12-alpine
 
