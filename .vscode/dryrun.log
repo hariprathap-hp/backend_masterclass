@@ -1,5 +1,5 @@
 make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/home/hari/go/src/github.com/hariprathap-hp/backend_masterclass'
-docker run --name postgres12 -p 8000:5432 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -d postgres:12-alpine
+docker run --name postgres12 -p 5432:5432 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -d postgres:12-alpine
 make: Leaving directory '/home/hari/go/src/github.com/hariprathap-hp/backend_masterclass'
  

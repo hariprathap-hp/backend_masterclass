@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Aug 17 11:22:40 2022
+# Make data base, printed on Wed Aug 17 16:37:14 2022
 
 # Variables
 
@@ -28,8 +28,6 @@ XDG_SESSION_CLASS = user
 XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
-# environment
-IM_CONFIG_PHASE = 1
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # environment
@@ -43,9 +41,9 @@ CURDIR := /home/hari/go/src/github.com/hariprathap-hp/backend_masterclass
 # makefile
 SHELL = /bin/sh
 # environment
-VSCODE_NLS_CONFIG = {"locale":"en-gb","availableLanguages":{},"_languagePackSupport":true}
+VTE_VERSION = 6003
 # environment
-_ = /usr/share/code/code
+VSCODE_NLS_CONFIG = {"locale":"en-gb","availableLanguages":{},"_languagePackSupport":true}
 # environment
 JOURNAL_STREAM = 8:64827
 # environment
@@ -55,7 +53,7 @@ MAKEFILE_LIST :=  Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
+IM_CONFIG_PHASE = 1
 # environment
 USERNAME = hari
 # environment
@@ -65,19 +63,21 @@ VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
 DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # environment
-INFOPATH = /home/linuxbrew/.linuxbrew/share/info:/home/linuxbrew/.linuxbrew/share/info:
+_ = /usr/bin/code
+# environment
+INFOPATH = /home/linuxbrew/.linuxbrew/share/info:
 # environment
 MANAGERPID = 2459
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
-VSCODE_CWD = /home/hari
+VSCODE_CWD = /home/hari/go/src/github.com/hariprathap-hp/backend_masterclass
 # environment
 GOPROXY = https://proxy.golang.org,direct
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /usr/local/go/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/home/hari/.local/bin:/home/hari/anaconda3/condabin:/home/hari/go/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/home/hari/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:~/kafka_2.13-3.0.0/bin
+PATH = /usr/local/go/bin:/home/hari/anaconda3/condabin:/home/hari/go/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/home/hari/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:~/kafka_2.13-3.0.0/bin
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
@@ -95,13 +95,11 @@ INVOCATION_ID = 0c1d58562e454196a27af5e09664a9cc
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
-LS_COLORS = 
+LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
 # environment
 XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
-# environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 4996
 # automatic
 %F = $(notdir $%)
 # environment
@@ -119,7 +117,7 @@ ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
 GTK_MODULES = gail:atk-bridge
 # environment
-MANPATH = /home/linuxbrew/.linuxbrew/share/man:/home/linuxbrew/.linuxbrew/share/man::
+MANPATH = /home/linuxbrew/.linuxbrew/share/man:
 # environment
 GOMODCACHE = /home/hari/go/pkg/mod
 # environment
@@ -127,11 +125,15 @@ HOME = /home/hari
 # environment
 HOMEBREW_CELLAR = /home/linuxbrew/.linuxbrew/Cellar
 # environment
+VSCODE_CLI = 1
+# environment
 VSCODE_CODE_CACHE_PATH = /home/hari/.config/Code/CachedData/3b889b090b5ad5793f524b5d1d39fda662b96a2a
 # environment
 LOGNAME = hari
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
 # environment
 LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
@@ -142,6 +144,8 @@ GNOME_DESKTOP_SESSION_ID = this-is-deprecated
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
 MAKELEVEL := 0
+# environment
+COLORTERM = truecolor
 # default
 MAKE = $(MAKE_COMMAND)
 # default
@@ -149,7 +153,7 @@ MAKECMDGOALS := all
 # environment
 QT_IM_MODULE = ibus
 # environment
-SHLVL = 0
+SHLVL = 1
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # default
@@ -162,12 +166,16 @@ USER = hari
 XDG_CURRENT_DESKTOP = Unity
 # environment
 GOROOT = /usr/local/go
+# makefile (from 'Makefile', line 4)
+DB_URL = postgresql://postgres:postgres@localhost:5432/simple_bank?sslmode=disable
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
 CONDA_SHLVL = 0
 # default
 MAKE_COMMAND := make
+# environment
+OLDPWD = /home/hari/go/src/github.com/hariprathap-hp
 # default
 .VARIABLES := 
 # automatic
@@ -204,8 +212,12 @@ LC_ALL = C
 CONDA_PYTHON_EXE = /home/hari/anaconda3/bin/python
 # environment
 GJS_DEBUG_TOPICS = JS ERROR;JS LOG
+# environment
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/74df49b0_bac4_43df_aa34_4acbad6fe115
 # automatic
 ^F = $(notdir $^)
+# environment
+GNOME_TERMINAL_SERVICE = :1.156
 # default
 SUFFIXES := 
 # environment
@@ -223,11 +235,13 @@ GJS_DEBUG_OUTPUT = stderr
 # environment
 LANG = C
 # environment
-VSCODE_PID = 4996
+TERM = xterm-256color
+# environment
+VSCODE_PID = 102109
 # environment
 _CE_CONDA = 
 # variable set hash-table stats:
-# Load=107/1024=10%, Rehash=0, Collisions=15/132=11%
+# Load=114/1024=11%, Rehash=0, Collisions=16/139=12%
 
 # Pattern-specific Variable Values
 
@@ -235,9 +249,9 @@ _CE_CONDA =
 
 # Directories
 
-# . (device 66311, inode 4988497): 15 files, no impossibilities.
+# . (device 66311, inode 4988497): 17 files, no impossibilities.
 
-# 15 files, no impossibilities in 1 directories.
+# 17 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -250,8 +264,8 @@ postgres:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 5):
-	docker run --name postgres12 -p 8000:5432 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -d postgres:12-alpine
+#  recipe to execute (from 'Makefile', line 7):
+	docker run --name postgres12 -p 5432:5432 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -d postgres:12-alpine
 
 # Not a target:
 all:
@@ -264,29 +278,29 @@ all:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+ 
 
 sqlc:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 20):
+#  recipe to execute (from 'Makefile', line 22):
 	sqlc generate
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-10 16:11:10.190287514
+#  Last modified 2022-08-17 13:23:02.411466119
 #  File has been updated.
 #  Successfully updated.
 
- 
 test:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 23):
+#  recipe to execute (from 'Makefile', line 25):
 	go test -v -cover ./...
 
 createdb:
@@ -294,7 +308,7 @@ createdb:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 8):
+#  recipe to execute (from 'Makefile', line 10):
 	docker exec -it postgres12 createdb --username=postgres --owner=postgres simple_bank
 
 # Not a target:
@@ -308,22 +322,22 @@ dropdb:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 11):
+#  recipe to execute (from 'Makefile', line 13):
 	docker exec -it postgres12 dropdb simple_bank
 
 migrateup:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 14):
-	migrate -path db/migration -database "postgresql://postgres:postgres@localhost:8000/simple_bank?sslmode=disable" -verbose up
+#  recipe to execute (from 'Makefile', line 16):
+	migrate -path db/migration -database "$(DB_URL)" -verbose up
 
 migratedown:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 17):
-	migrate -path db/migration -database "postgresql://postgres:postgres@localhost:8000/simple_bank?sslmode=disable" -verbose down
+#  recipe to execute (from 'Makefile', line 19):
+	migrate -path db/migration -database "$(DB_URL)" -verbose down
 
 # files hash-table stats:
 # Load=12/1024=1%, Rehash=0, Collisions=0/27=0%
@@ -333,12 +347,12 @@ migratedown:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 28 / storage = 245 B / avg = 8 B
-# current buf: size = 8162 B / used = 245 B / count = 28 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 30 / storage = 261 B / avg = 8 B
+# current buf: size = 8162 B / used = 261 B / count = 30 / avg = 8 B
 
-# strcache performance: lookups = 45 / hit rate = 37%
+# strcache performance: lookups = 47 / hit rate = 36%
 # hash-table stats:
-# Load=28/8192=0%, Rehash=0, Collisions=1/45=2%
-# Finished Make data base on Wed Aug 17 11:22:40 2022
+# Load=30/8192=0%, Rehash=0, Collisions=1/47=2%
+# Finished Make data base on Wed Aug 17 16:37:14 2022
 
  
