@@ -3,6 +3,7 @@ package db
 import (
 	"context"
 	"database/sql"
+	"fmt"
 	"testing"
 	"time"
 
@@ -90,6 +91,7 @@ func TestListAccounts(t *testing.T) {
 	}
 
 	accounts, err := testQueries.ListAccounts(context.Background(), arg)
+	fmt.Println(accounts)
 	require.NoError(t, err)
 	require.Len(t, accounts, 5)
 
