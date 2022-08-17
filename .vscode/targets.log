@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Aug 17 17:19:56 2022
+# Make data base, printed on Wed Aug 17 20:07:50 2022
 
 # Variables
 
@@ -45,7 +45,7 @@ VTE_VERSION = 6003
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-gb","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:64827
+JOURNAL_STREAM = 8:64834
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # makefile (from 'Makefile', line 1)
@@ -83,7 +83,7 @@ PATH = /usr/local/go/bin:/home/hari/anaconda3/condabin:/home/hari/go/bin:/home/l
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/hari-HP-Laptop-14s-fq1xxx:@/tmp/.ICE-unix/2724,unix/hari-HP-Laptop-14s-fq1xxx:/tmp/.ICE-unix/2724
+SESSION_MANAGER = local/hari-HP-Laptop-14s-fq1xxx:@/tmp/.ICE-unix/2729,unix/hari-HP-Laptop-14s-fq1xxx:/tmp/.ICE-unix/2729
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -93,7 +93,7 @@ XDG_MENU_PREFIX = gnome-
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 0c1d58562e454196a27af5e09664a9cc
+INVOCATION_ID = f4dfed0ad78c443b9ed42857c854841b
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -113,7 +113,7 @@ PWD = /home/hari/go/src/github.com/hariprathap-hp/backend_masterclass
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 2658
+SSH_AGENT_PID = 2659
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -215,11 +215,11 @@ CONDA_PYTHON_EXE = /home/hari/anaconda3/bin/python
 # environment
 GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/74df49b0_bac4_43df_aa34_4acbad6fe115
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/9164cb47_f754_4016_b909_93117a238eb3
 # automatic
 ^F = $(notdir $^)
 # environment
-GNOME_TERMINAL_SERVICE = :1.156
+GNOME_TERMINAL_SERVICE = :1.114
 # default
 SUFFIXES := 
 # environment
@@ -239,7 +239,7 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 108786
+VSCODE_PID = 9170
 # environment
 _CE_CONDA = 
 # variable set hash-table stats:
@@ -251,9 +251,9 @@ _CE_CONDA =
 
 # Directories
 
-# . (device 66311, inode 4988497): 18 files, no impossibilities.
+# . (device 66311, inode 4988497): 19 files, no impossibilities.
 
-# 18 files, no impossibilities in 1 directories.
+# 19 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -276,12 +276,12 @@ all:
 #  File does not exist.
 #  File has not been updated.
 
-.PHONY: postgres createdb dropdb sqlc test
+.PHONY: postgres createdb dropdb sqlc test server
 #  Implicit rule search has not been done.
 #  Modification time never checked.
- 
 #  File has not been updated.
 
+ 
 sqlc:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
@@ -293,9 +293,17 @@ sqlc:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-17 13:23:02.411466119
+#  Last modified 2022-08-17 17:38:49.012064745
 #  File has been updated.
 #  Successfully updated.
+
+server:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 28):
+	go run main.go
 
 test:
 #  Phony target (prerequisite of .PHONY).
@@ -342,19 +350,20 @@ migratedown:
 	migrate -path db/migration -database "$(DB_URL)" -verbose down
 
 # files hash-table stats:
-# Load=12/1024=1%, Rehash=0, Collisions=0/27=0%
+# Load=13/1024=1%, Rehash=0, Collisions=0/29=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
+ 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 31 / storage = 265 B / avg = 8 B
-# current buf: size = 8162 B / used = 265 B / count = 31 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 33 / storage = 280 B / avg = 8 B
+# current buf: size = 8162 B / used = 280 B / count = 33 / avg = 8 B
 
-# strcache performance: lookups = 48 / hit rate = 35%
+# strcache performance: lookups = 52 / hit rate = 36%
 # hash-table stats:
-# Load=31/8192=0%, Rehash=0, Collisions=1/48=2%
-# Finished Make data base on Wed Aug 17 17:19:56 2022
+# Load=33/8192=0%, Rehash=0, Collisions=1/52=2%
+# Finished Make data base on Wed Aug 17 20:07:50 2022
 
  

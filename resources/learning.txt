@@ -66,3 +66,8 @@ Gitlab:
 	-> Workflow -> Jobs -> Steps -> Actions
 
 	-> Each job will be run by a separate runner which will report all info to gitlab
+
+Errors:
+-------
+Mockgen reflection error solution is a workaround found in the link below,
+	-> https://dev.to/acetorscode/comment/1f1ma
