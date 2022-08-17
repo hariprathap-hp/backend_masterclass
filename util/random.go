@@ -28,7 +28,7 @@ func RandomString(n int) string {
 }
 
 func RandomCurrency() string {
-	currency := []string{"USD", "EUR", "RUPEES"}
+	currency := []string{"USD", "EUR", "INR"}
 	n := len(currency)
 	return currency[rand.Intn(n)]
 
