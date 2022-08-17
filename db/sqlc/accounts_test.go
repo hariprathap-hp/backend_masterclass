@@ -3,7 +3,6 @@ package db
 import (
 	"context"
 	"database/sql"
-	"fmt"
 	"testing"
 	"time"
 
@@ -91,9 +90,8 @@ func TestListAccounts(t *testing.T) {
 	}
 
 	accounts, err := testQueries.ListAccounts(context.Background(), arg)
-	fmt.Println(accounts)
 	require.NoError(t, err)
-	require.Len(t, accounts, 5)
+	require.Len(t, accounts, 2)
 
 	for _, account := range accounts {
 		require.NotEmpty(t, account)
