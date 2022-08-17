@@ -25,7 +25,6 @@ func (server *Server) createAccount(c *gin.Context) {
 		Balance:  0,
 		Currency: req.Currency,
 	}
-
 	account, err := server.store.CreateAccount(c, arg)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, errorResponse(err))
