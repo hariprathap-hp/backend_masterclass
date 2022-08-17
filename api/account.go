@@ -84,3 +84,53 @@ func (server *Server) listAccount(c *gin.Context) {
 
 	c.JSON(http.StatusOK, account)
 }
+
+type delAccountRequest struct {
+	ID int64 `uri:"id" binding:"required,min=1"`
+}
+
+func (server *Server) deleteAccount(c *gin.Context) {
+	var req delAccountRequest
+	if err := c.ShouldBindUri(&req); err != nil {
+		c.JSON(http.StatusBadRequest, errorResponse(err))
+		return
+	}
+
+	err := server.store.DeleteAccount(c, req.ID)
+	if err != nil {
+		if err == sql.ErrNoRows {
+			c.JSON(http.StatusNotFound, errorResponse(err))
+			return
+		}
+		c.JSON(http.StatusInternalServerError, errorResponse(err))
+		return
+	}
+
+	c.JSON(http.StatusOK, "account deleted")
+}
+
+type updateAccountRequest struct {
+	ID      int64 `json:"id" binding:"required"`
+	Balance int64 `json:"balance" binding:"required,min=1"`
+}
+
+func (server *Server) updateAccount(c *gin.Context) {
+	var req updateAccountRequest
+	if err := c.ShouldBindJSON(&req); err != nil {
+		c.JSON(http.StatusBadRequest, errorResponse(err))
+		return
+	}
+
+	arg := db.UpdateAccountParams{
+		ID:      req.ID,
+		Balance: req.Balance,
+	}
+
+	account, err := server.store.UpdateAccount(c, arg)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, errorResponse(err))
+		return
+	}
+
+	c.JSON(http.StatusOK, account)
+}
