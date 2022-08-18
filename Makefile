@@ -27,4 +27,7 @@ test:
 server:
 	go run main.go
 
-.PHONY: postgres createdb dropdb sqlc test server
+mock:
+	mockgen -package mockdb -build_flags=--mod=mod -destination db/mock/store.go github.com/hariprathap-hp/backend_masterclass/db/sqlc Store
+
+.PHONY: postgres createdb dropdb sqlc test server mock
