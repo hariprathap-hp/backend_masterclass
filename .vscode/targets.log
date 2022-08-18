@@ -1,6 +1,4 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'all'.  Stop.
-
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -8,7 +6,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Aug 18 17:43:34 2022
+# Make data base, printed on Fri Aug 19 01:34:04 2022
 
 # Variables
 
@@ -45,7 +43,7 @@ VTE_VERSION = 6003
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-gb","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:62997
+JOURNAL_STREAM = 8:51977
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # makefile (from 'Makefile', line 1)
@@ -67,7 +65,7 @@ _ = /usr/bin/code
 # environment
 INFOPATH = /home/linuxbrew/.linuxbrew/share/info:
 # environment
-MANAGERPID = 2387
+MANAGERPID = 2222
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -81,7 +79,7 @@ PATH = /usr/local/go/bin:/home/hari/anaconda3/condabin:/home/hari/go/bin:/home/l
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/hari-HP-Laptop-14s-fq1xxx:@/tmp/.ICE-unix/2651,unix/hari-HP-Laptop-14s-fq1xxx:/tmp/.ICE-unix/2651
+SESSION_MANAGER = local/hari-HP-Laptop-14s-fq1xxx:@/tmp/.ICE-unix/2717,unix/hari-HP-Laptop-14s-fq1xxx:/tmp/.ICE-unix/2717
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -91,7 +89,7 @@ XDG_MENU_PREFIX = gnome-
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = c54d704de84b4e48bf999e8b8f0ea277
+INVOCATION_ID = 2438b30700e54fed846bab6740d3a9ec
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -111,7 +109,7 @@ PWD = /home/hari/go/src/github.com/hariprathap-hp/backend_masterclass
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 2585
+SSH_AGENT_PID = 2648
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -213,11 +211,11 @@ CONDA_PYTHON_EXE = /home/hari/anaconda3/bin/python
 # environment
 GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/d46432a4_5b34_412f_9107_01265b45c827
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/6ddd83f5_ce01_4541_9109_ac003022dddc
 # automatic
 ^F = $(notdir $^)
 # environment
-GNOME_TERMINAL_SERVICE = :1.97
+GNOME_TERMINAL_SERVICE = :1.112
 # default
 SUFFIXES := 
 # environment
@@ -237,7 +235,7 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 6966
+VSCODE_PID = 8070
 # environment
 _CE_CONDA = 
 # variable set hash-table stats:
@@ -280,12 +278,14 @@ all:
 #  File has not been updated.
 
 sqlc:
- 
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 22):
+ 
+make: *** No rule to make target 'all'.  Stop.
+
 	sqlc generate
 
 # Not a target:
@@ -369,6 +369,6 @@ mock:
 # strcache performance: lookups = 57 / hit rate = 36%
 # hash-table stats:
 # Load=36/8192=0%, Rehash=0, Collisions=1/57=2%
-# Finished Make data base on Thu Aug 18 17:43:34 2022
+# Finished Make data base on Fri Aug 19 01:34:04 2022
 
  
