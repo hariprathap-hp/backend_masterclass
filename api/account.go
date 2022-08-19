@@ -2,10 +2,12 @@ package api
 
 import (
 	"database/sql"
+	"log"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
 	db "github.com/hariprathap-hp/backend_masterclass/db/sqlc"
+	"github.com/lib/pq"
 )
 
 type createAccountRequest struct {
@@ -27,6 +29,9 @@ func (server *Server) createAccount(c *gin.Context) {
 	}
 	account, err := server.store.CreateAccount(c, arg)
 	if err != nil {
+		if pqErr, ok := err.(*pq.Error); !ok {
+			log.Println(pqErr.Code.Name())
+		}
 		c.JSON(http.StatusInternalServerError, errorResponse(err))
 		return
 	}
