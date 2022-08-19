@@ -36,4 +36,4 @@ server:
 mock:
 	mockgen -package mockdb -build_flags=--mod=mod -destination db/mock/store.go github.com/hariprathap-hp/backend_masterclass/db/sqlc Store
 
-.PHONY: postgres createdb dropdb sqlc test server mock migrateup1 migrateup migratedown migratedown1
+.PHONY: postgres createdb dropdb sqlc test server mock migrateup migratedown migrateup1 migratedown1

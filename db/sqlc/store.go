@@ -31,6 +31,8 @@ func (store *SQLStore) execTx(ctx context.Context, fn func(*Queries) error) erro
 		return err
 	}
 
+	//fmt.Println("Failing inside exec At 2-- ", txName)
+
 	q := New(tx)
 	err = fn(q)
 
@@ -57,9 +59,13 @@ type TransferResult struct {
 	ToEntry     Entries   `json:"to_entry"`
 }
 
+var txKey = struct{}{}
+
 func (store *SQLStore) TransferTx(ctx context.Context, arg TransferTxParams) (TransferResult, error) {
 	var result TransferResult
 
+	txName := ctx.Value(txKey)
+	fmt.Println("Failing At -- ", txName)
 	err := store.execTx(ctx, func(q *Queries) error {
 		var err error
 		result.Transfer, err = q.CreateTransfer(ctx, CreateTransferParams{
@@ -80,6 +86,7 @@ func (store *SQLStore) TransferTx(ctx context.Context, arg TransferTxParams) (Tr
 			return err
 		}
 
+		fmt.Println("Failing At -- ", txName)
 		result.ToEntry, err = q.CreateEntry(ctx, CreateEntryParams{
 			AccountID: arg.FromAccountID,
 			Amount:    arg.Amount,

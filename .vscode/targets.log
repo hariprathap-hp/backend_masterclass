@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -6,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Aug 19 01:34:04 2022
+# Make data base, printed on Fri Aug 19 10:11:35 2022
 
 # Variables
 
@@ -43,7 +45,7 @@ VTE_VERSION = 6003
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-gb","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:51977
+JOURNAL_STREAM = 8:59342
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # makefile (from 'Makefile', line 1)
@@ -65,7 +67,7 @@ _ = /usr/bin/code
 # environment
 INFOPATH = /home/linuxbrew/.linuxbrew/share/info:
 # environment
-MANAGERPID = 2222
+MANAGERPID = 2525
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -79,7 +81,7 @@ PATH = /usr/local/go/bin:/home/hari/anaconda3/condabin:/home/hari/go/bin:/home/l
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/hari-HP-Laptop-14s-fq1xxx:@/tmp/.ICE-unix/2717,unix/hari-HP-Laptop-14s-fq1xxx:/tmp/.ICE-unix/2717
+SESSION_MANAGER = local/hari-HP-Laptop-14s-fq1xxx:@/tmp/.ICE-unix/2801,unix/hari-HP-Laptop-14s-fq1xxx:/tmp/.ICE-unix/2801
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -89,7 +91,7 @@ XDG_MENU_PREFIX = gnome-
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 2438b30700e54fed846bab6740d3a9ec
+INVOCATION_ID = 396449b1dda942428a8d2a5d1b2a43dd
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -109,7 +111,7 @@ PWD = /home/hari/go/src/github.com/hariprathap-hp/backend_masterclass
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 2648
+SSH_AGENT_PID = 2728
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -211,11 +213,11 @@ CONDA_PYTHON_EXE = /home/hari/anaconda3/bin/python
 # environment
 GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/6ddd83f5_ce01_4541_9109_ac003022dddc
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/7cb00bcf_9f3b_4ed0_a554_999ef16ea54b
 # automatic
 ^F = $(notdir $^)
 # environment
-GNOME_TERMINAL_SERVICE = :1.112
+GNOME_TERMINAL_SERVICE = :1.108
 # default
 SUFFIXES := 
 # environment
@@ -235,7 +237,7 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 8070
+VSCODE_PID = 7620
 # environment
 _CE_CONDA = 
 # variable set hash-table stats:
@@ -247,9 +249,9 @@ _CE_CONDA =
 
 # Directories
 
-# . (device 66311, inode 4988497): 21 files, no impossibilities.
+# . (device 66311, inode 4988497): 22 files, no impossibilities.
 
-# 21 files, no impossibilities in 1 directories.
+# 22 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -272,7 +274,15 @@ all:
 #  File does not exist.
 #  File has not been updated.
 
-.PHONY: postgres createdb dropdb sqlc test server mock
+migratedown1:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 25):
+	migrate -path db/migration -database "$(DB_URL)" -verbose down 1
+
+.PHONY: postgres createdb dropdb sqlc test server mock migrateup1 migrateup migratedown migratedown1
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -280,18 +290,16 @@ all:
 sqlc:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
+ 
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 22):
- 
-make: *** No rule to make target 'all'.  Stop.
-
+#  recipe to execute (from 'Makefile', line 28):
 	sqlc generate
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-17 22:19:22.850919858
+#  Last modified 2022-08-19 02:22:55.693273127
 #  File has been updated.
 #  Successfully updated.
 
@@ -300,7 +308,7 @@ server:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 28):
+#  recipe to execute (from 'Makefile', line 34):
 	go run main.go
 
 test:
@@ -308,7 +316,7 @@ test:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 25):
+#  recipe to execute (from 'Makefile', line 31):
 	go test -v -cover ./...
 
 createdb:
@@ -334,17 +342,27 @@ dropdb:
 	docker exec -it postgres12 dropdb simple_bank
 
 migrateup:
+#  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
-#  Modification time never checked.
+#  File does not exist.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 16):
 	migrate -path db/migration -database "$(DB_URL)" -verbose up
 
-migratedown:
+migrateup1:
+#  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
-#  Modification time never checked.
+#  File does not exist.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 19):
+	migrate -path db/migration -database "$(DB_URL)" -verbose up 1
+
+migratedown:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 22):
 	migrate -path db/migration -database "$(DB_URL)" -verbose down
 
 mock:
@@ -352,23 +370,23 @@ mock:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 31):
+#  recipe to execute (from 'Makefile', line 37):
 	mockgen -package mockdb -build_flags=--mod=mod -destination db/mock/store.go github.com/hariprathap-hp/backend_masterclass/db/sqlc Store
 
 # files hash-table stats:
-# Load=14/1024=1%, Rehash=0, Collisions=0/31=0%
+# Load=16/1024=2%, Rehash=0, Collisions=0/37=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 36 / storage = 305 B / avg = 8 B
-# current buf: size = 8162 B / used = 305 B / count = 36 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 39 / storage = 356 B / avg = 9 B
+# current buf: size = 8162 B / used = 356 B / count = 39 / avg = 9 B
 
-# strcache performance: lookups = 57 / hit rate = 36%
+# strcache performance: lookups = 66 / hit rate = 40%
 # hash-table stats:
-# Load=36/8192=0%, Rehash=0, Collisions=1/57=2%
-# Finished Make data base on Fri Aug 19 01:34:04 2022
+# Load=39/8192=0%, Rehash=0, Collisions=1/66=2%
+# Finished Make data base on Fri Aug 19 10:11:35 2022
 
  
