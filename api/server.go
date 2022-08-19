@@ -15,6 +15,8 @@ func NewServer(store db.Store) *Server {
 	router := gin.Default()
 
 	// bind.validator.Engine
+	router.POST("/users", server.createUser)
+	router.GET("/users/:username", server.getUser)
 
 	router.POST("/accounts", server.createAccount)
 	router.POST("/transfers", server.createTransfer)
