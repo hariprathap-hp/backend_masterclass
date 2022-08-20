@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Aug 20 09:31:40 2022
+# Make data base, printed on Sat Aug 20 11:52:21 2022
 
 # Variables
 
@@ -54,6 +54,8 @@ MAKEFILE_LIST :=  Makefile
 @F = $(notdir $@)
 # environment
 IM_CONFIG_PHASE = 1
+# environment
+GO111MODULE = on
 # environment
 USERNAME = hari
 # environment
@@ -237,11 +239,11 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 7597
+VSCODE_PID = 54812
 # environment
 _CE_CONDA = 
 # variable set hash-table stats:
-# Load=114/1024=11%, Rehash=0, Collisions=16/139=12%
+# Load=115/1024=11%, Rehash=0, Collisions=16/140=11%
 
 # Pattern-specific Variable Values
 
@@ -279,10 +281,10 @@ migratedown1:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
+ 
 #  recipe to execute (from 'Makefile', line 25):
 	migrate -path db/migration -database "$(DB_URL)" -verbose down 1
 
- 
 .PHONY: postgres createdb dropdb sqlc test server mock migrateup migratedown migrateup1 migratedown1
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -387,6 +389,6 @@ mock:
 # strcache performance: lookups = 65 / hit rate = 41%
 # hash-table stats:
 # Load=38/8192=0%, Rehash=0, Collisions=1/65=2%
-# Finished Make data base on Sat Aug 20 09:31:40 2022
+# Finished Make data base on Sat Aug 20 11:52:21 2022
 
  
