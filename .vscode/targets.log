@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Aug 20 11:52:21 2022
+# Make data base, printed on Tue Aug 23 17:12:39 2022
 
 # Variables
 
@@ -45,7 +45,7 @@ VTE_VERSION = 6003
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-gb","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:66654
+JOURNAL_STREAM = 8:55277
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # makefile (from 'Makefile', line 1)
@@ -54,8 +54,6 @@ MAKEFILE_LIST :=  Makefile
 @F = $(notdir $@)
 # environment
 IM_CONFIG_PHASE = 1
-# environment
-GO111MODULE = on
 # environment
 USERNAME = hari
 # environment
@@ -69,7 +67,7 @@ _ = /usr/bin/code
 # environment
 INFOPATH = /home/linuxbrew/.linuxbrew/share/info:
 # environment
-MANAGERPID = 2461
+MANAGERPID = 2479
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -83,7 +81,7 @@ PATH = /usr/local/go/bin:/home/hari/anaconda3/condabin:/home/hari/go/bin:/home/l
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/hari-HP-Laptop-14s-fq1xxx:@/tmp/.ICE-unix/2726,unix/hari-HP-Laptop-14s-fq1xxx:/tmp/.ICE-unix/2726
+SESSION_MANAGER = local/hari-HP-Laptop-14s-fq1xxx:@/tmp/.ICE-unix/2742,unix/hari-HP-Laptop-14s-fq1xxx:/tmp/.ICE-unix/2742
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -93,7 +91,7 @@ XDG_MENU_PREFIX = gnome-
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 3206e7389e1046d787726f748c2f24bd
+INVOCATION_ID = 7823921b9d684e6e95d8ed7e06cc6f07
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -113,7 +111,7 @@ PWD = /home/hari/go/src/github.com/hariprathap-hp/backend_masterclass
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 2659
+SSH_AGENT_PID = 2676
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -215,11 +213,11 @@ CONDA_PYTHON_EXE = /home/hari/anaconda3/bin/python
 # environment
 GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/a849d7bf_6d8e_4377_848c_d4c9fd09c88a
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/adbebce5_204f_44e3_ac78_13a4fe3d40de
 # automatic
 ^F = $(notdir $^)
 # environment
-GNOME_TERMINAL_SERVICE = :1.98
+GNOME_TERMINAL_SERVICE = :1.133
 # default
 SUFFIXES := 
 # environment
@@ -239,11 +237,11 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 54812
+VSCODE_PID = 37721
 # environment
 _CE_CONDA = 
 # variable set hash-table stats:
-# Load=115/1024=11%, Rehash=0, Collisions=16/140=11%
+# Load=114/1024=11%, Rehash=0, Collisions=16/139=12%
 
 # Pattern-specific Variable Values
 
@@ -389,6 +387,6 @@ mock:
 # strcache performance: lookups = 65 / hit rate = 41%
 # hash-table stats:
 # Load=38/8192=0%, Rehash=0, Collisions=1/65=2%
-# Finished Make data base on Sat Aug 20 11:52:21 2022
+# Finished Make data base on Tue Aug 23 17:12:39 2022
 
  
