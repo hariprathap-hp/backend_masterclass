@@ -4,8 +4,6 @@ import (
 	"context"
 	"database/sql"
 	"fmt"
-
-	_ "github.com/golang/mock/mockgen/model"
 )
 
 type Store interface {
@@ -26,7 +24,8 @@ func NewStore(db *sql.DB) Store {
 }
 
 func (store *SQLStore) execTx(ctx context.Context, fn func(*Queries) error) error {
-	tx, err := store.db.BeginTx(context.Background(), nil)
+	fmt.Println("Printing DB - ", store.db)
+	tx, err := store.db.BeginTx(ctx, nil)
 	if err != nil {
 		return err
 	}
@@ -88,7 +87,7 @@ func (store *SQLStore) TransferTx(ctx context.Context, arg TransferTxParams) (Tr
 
 		fmt.Println("Failing At -- ", txName)
 		result.ToEntry, err = q.CreateEntry(ctx, CreateEntryParams{
-			AccountID: arg.FromAccountID,
+			AccountID: arg.ToAccountID,
 			Amount:    arg.Amount,
 		})
 
@@ -102,10 +101,7 @@ func (store *SQLStore) TransferTx(ctx context.Context, arg TransferTxParams) (Tr
 		} else {
 			result.ToAccount, result.FromAccount, err = addMoney(ctx, q, arg.ToAccountID, arg.FromAccountID, arg.Amount, -arg.Amount)
 		}
-		if err != nil {
-			return err
-		}
-		return nil
+		return err
 	})
 	return result, err
 }
@@ -122,8 +118,5 @@ func addMoney(ctx context.Context, q *Queries, accountId1, accountId2 int64, amo
 		Amount: amount2,
 		ID:     accountId2,
 	})
-	if err != nil {
-		return
-	}
 	return
 }
