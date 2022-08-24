@@ -11,6 +11,12 @@ import (
 func TestTransferTx(t *testing.T) {
 	store := NewStore(testDB)
 
+	if testDB != nil {
+		fmt.Println("test DB is not nil")
+	} else {
+		fmt.Println("test DB is nil")
+	}
+
 	account1 := CreateRandomAccount(t)
 	account2 := CreateRandomAccount(t)
 
@@ -69,7 +75,7 @@ func TestTransferTx(t *testing.T) {
 
 		toEntry := result.ToEntry
 		require.NotEmpty(t, toEntry)
-		require.Equal(t, toEntry.AccountID, account1.ID)
+		require.Equal(t, toEntry.AccountID, account2.ID)
 		require.Equal(t, toEntry.Amount, amount)
 		require.NotZero(t, toEntry.ID)
 		require.NotZero(t, toEntry.CreatedAt)
@@ -152,9 +158,9 @@ func TestTransferTxDeadlock(t *testing.T) {
 
 	}
 
-	updateAccount1, err := testQueries.GetAccount(context.Background(), account1.ID)
+	updateAccount1, err := store.GetAccount(context.Background(), account1.ID)
 	require.NoError(t, err)
-	updateAccount2, err := testQueries.GetAccount(context.Background(), account2.ID)
+	updateAccount2, err := store.GetAccount(context.Background(), account2.ID)
 	require.NoError(t, err)
 
 	fmt.Println("<< before --  ", updateAccount1.Balance, updateAccount2.Balance)
