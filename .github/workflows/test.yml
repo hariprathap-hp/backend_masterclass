@@ -1,4 +1,4 @@
-name: ci-test-go
+name: Run Unit Tests
 
 on:
   push:

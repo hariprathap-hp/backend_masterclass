@@ -74,3 +74,8 @@ Mockgen reflection error solution is a workaround found in the link below,
 
 
 docker run -p 8080:8080 --network bank-network -e GIN_MODE=release -e DB_SOURCE="postgresql://postgres:postgres@postgres12:5432/simple_bank?sslmode=disable" simple_bank:latest
+
+AWS ECR Secret keys
+AKIA3ZYMFA2RHFIB5DXH
+Secret Access Key:
+	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

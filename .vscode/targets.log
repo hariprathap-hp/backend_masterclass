@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Aug 24 11:17:31 2022
+# Make data base, printed on Thu Aug 25 10:40:01 2022
 
 # Variables
 
@@ -45,7 +45,7 @@ VTE_VERSION = 6003
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-gb","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:68749
+JOURNAL_STREAM = 8:58228
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # makefile (from 'Makefile', line 1)
@@ -54,8 +54,6 @@ MAKEFILE_LIST :=  Makefile
 @F = $(notdir $@)
 # environment
 IM_CONFIG_PHASE = 1
-# environment
-GO111MODULE = on
 # environment
 USERNAME = hari
 # environment
@@ -69,7 +67,7 @@ _ = /usr/bin/code
 # environment
 INFOPATH = /home/linuxbrew/.linuxbrew/share/info:
 # environment
-MANAGERPID = 2780
+MANAGERPID = 2586
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -83,7 +81,7 @@ PATH = /usr/local/go/bin:/home/hari/anaconda3/condabin:/home/hari/go/bin:/home/l
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/hari-HP-Laptop-14s-fq1xxx:@/tmp/.ICE-unix/3046,unix/hari-HP-Laptop-14s-fq1xxx:/tmp/.ICE-unix/3046
+SESSION_MANAGER = local/hari-HP-Laptop-14s-fq1xxx:@/tmp/.ICE-unix/2849,unix/hari-HP-Laptop-14s-fq1xxx:/tmp/.ICE-unix/2849
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -93,7 +91,7 @@ XDG_MENU_PREFIX = gnome-
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 3675d111f03c47c6ba812e6d7c4a445a
+INVOCATION_ID = 01f8b93fccf64ca18122ba83f15f580f
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -113,7 +111,7 @@ PWD = /home/hari/go/src/github.com/hariprathap-hp/backend_masterclass
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 2980
+SSH_AGENT_PID = 2783
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -215,11 +213,11 @@ CONDA_PYTHON_EXE = /home/hari/anaconda3/bin/python
 # environment
 GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/b66fab20_96a5_442a_8dad_c8731f04bf16
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/659638bc_9ff5_4269_b5ff_b1affba4949d
 # automatic
 ^F = $(notdir $^)
 # environment
-GNOME_TERMINAL_SERVICE = :1.103
+GNOME_TERMINAL_SERVICE = :1.111
 # default
 SUFFIXES := 
 # environment
@@ -239,11 +237,11 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 12541
+VSCODE_PID = 8296
 # environment
 _CE_CONDA = 
 # variable set hash-table stats:
-# Load=115/1024=11%, Rehash=0, Collisions=16/140=11%
+# Load=114/1024=11%, Rehash=0, Collisions=16/139=12%
 
 # Pattern-specific Variable Values
 
@@ -251,9 +249,9 @@ _CE_CONDA =
 
 # Directories
 
-# . (device 66311, inode 4988497): 21 files, no impossibilities.
+# . (device 66311, inode 4988497): 25 files, no impossibilities.
 
-# 21 files, no impossibilities in 1 directories.
+# 25 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -267,7 +265,7 @@ postgres:
 #  File does not exist.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 7):
-	docker run --name postgres12 -p 5432:5432 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -d postgres:12-alpine
+	docker run --name postgres12 --network bank-network -p 5432:5432 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -d postgres:12-alpine
 
 # Not a target:
 all:
@@ -278,9 +276,9 @@ all:
 
 migratedown1:
 #  Phony target (prerequisite of .PHONY).
- 
 #  Implicit rule search has not been done.
 #  File does not exist.
+ 
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 25):
 	migrate -path db/migration -database "$(DB_URL)" -verbose down 1
@@ -301,7 +299,7 @@ sqlc:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-19 11:40:07.707074214
+#  Last modified 2022-08-24 13:08:01.311670583
 #  File has been updated.
 #  Successfully updated.
 
@@ -383,12 +381,12 @@ mock:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 38 / storage = 313 B / avg = 8 B
-# current buf: size = 8162 B / used = 313 B / count = 38 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 42 / storage = 364 B / avg = 8 B
+# current buf: size = 8162 B / used = 364 B / count = 42 / avg = 8 B
 
-# strcache performance: lookups = 65 / hit rate = 41%
+# strcache performance: lookups = 69 / hit rate = 39%
 # hash-table stats:
-# Load=38/8192=0%, Rehash=0, Collisions=1/65=2%
-# Finished Make data base on Wed Aug 24 11:17:31 2022
+# Load=42/8192=1%, Rehash=0, Collisions=1/69=1%
+# Finished Make data base on Thu Aug 25 10:40:01 2022
 
  
