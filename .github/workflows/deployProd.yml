@@ -13,7 +13,8 @@ jobs:
      - name: Configure AWS credentials from Prod Account
        uses: aws-actions/configure-aws-credentials@v1
        with:
-        role-to-assume: arn:aws:iam::811237443234:role/my-github-actions-role
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_VALUE }}
         aws-region: ap-south-1
 
      - name: Login to Amazon ECR
