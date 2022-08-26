@@ -79,3 +79,6 @@ AWS ECR Secret keys
 AKIA3ZYMFA2RHFIB5DXH
 Secret Access Key:
 	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
+
+     - name: Check out code
+       uses: actions/checkout@v2

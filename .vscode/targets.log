@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Aug 25 10:40:01 2022
+# Make data base, printed on Thu Aug 25 17:49:41 2022
 
 # Variables
 
@@ -54,6 +54,8 @@ MAKEFILE_LIST :=  Makefile
 @F = $(notdir $@)
 # environment
 IM_CONFIG_PHASE = 1
+# environment
+GO111MODULE = on
 # environment
 USERNAME = hari
 # environment
@@ -237,11 +239,11 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 8296
+VSCODE_PID = 31560
 # environment
 _CE_CONDA = 
 # variable set hash-table stats:
-# Load=114/1024=11%, Rehash=0, Collisions=16/139=12%
+# Load=115/1024=11%, Rehash=0, Collisions=16/140=11%
 
 # Pattern-specific Variable Values
 
@@ -278,9 +280,9 @@ migratedown1:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
- 
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 25):
+ 
 	migrate -path db/migration -database "$(DB_URL)" -verbose down 1
 
 .PHONY: postgres createdb dropdb sqlc test server mock migrateup migratedown migrateup1 migratedown1
@@ -299,7 +301,7 @@ sqlc:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-24 13:08:01.311670583
+#  Last modified 2022-08-25 12:34:02.184217585
 #  File has been updated.
 #  Successfully updated.
 
@@ -387,6 +389,6 @@ mock:
 # strcache performance: lookups = 69 / hit rate = 39%
 # hash-table stats:
 # Load=42/8192=1%, Rehash=0, Collisions=1/69=1%
-# Finished Make data base on Thu Aug 25 10:40:01 2022
+# Finished Make data base on Thu Aug 25 17:49:41 2022
 
  

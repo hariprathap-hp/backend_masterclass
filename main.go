@@ -32,7 +32,7 @@ func main() {
 		log.Fatal("can not creata server")
 	}
 
-	err = server.Start(":8080")
+	err = server.Start(config.ServerAddress)
 	if err != nil {
 		log.Fatal("can not start server")
 	}
