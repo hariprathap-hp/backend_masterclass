@@ -29,6 +29,8 @@ func (q *Queries) UpdateAccount(ctx context.Context, arg UpdateAccountParams) (A
 }
 
 
+
+
 func (q *Queries)  AddAccountBalance(ctx context.Context, arg AddAccountBalanceParams) (Accounts, error) {
 	row := q.db.QueryRowContext(ctx, addAccountBalance, arg.Amount, arg.ID)
 	var i Accounts

@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Aug 25 17:49:41 2022
+# Make data base, printed on Tue Sep  6 16:46:53 2022
 
 # Variables
 
@@ -28,6 +28,8 @@ XDG_SESSION_CLASS = user
 XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
+# environment
+IM_CONFIG_PHASE = 1
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # environment
@@ -45,7 +47,9 @@ VTE_VERSION = 6003
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-gb","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:58228
+_ = /usr/bin/code
+# environment
+JOURNAL_STREAM = 8:84579
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # makefile (from 'Makefile', line 1)
@@ -53,9 +57,7 @@ MAKEFILE_LIST :=  Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-IM_CONFIG_PHASE = 1
-# environment
-GO111MODULE = on
+GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
 # environment
 USERNAME = hari
 # environment
@@ -65,11 +67,9 @@ VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
 DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # environment
-_ = /usr/bin/code
-# environment
 INFOPATH = /home/linuxbrew/.linuxbrew/share/info:
 # environment
-MANAGERPID = 2586
+MANAGERPID = 5334
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -83,7 +83,7 @@ PATH = /usr/local/go/bin:/home/hari/anaconda3/condabin:/home/hari/go/bin:/home/l
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/hari-HP-Laptop-14s-fq1xxx:@/tmp/.ICE-unix/2849,unix/hari-HP-Laptop-14s-fq1xxx:/tmp/.ICE-unix/2849
+SESSION_MANAGER = local/hari-HP-Laptop-14s-fq1xxx:@/tmp/.ICE-unix/5600,unix/hari-HP-Laptop-14s-fq1xxx:/tmp/.ICE-unix/5600
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -93,7 +93,7 @@ XDG_MENU_PREFIX = gnome-
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 01f8b93fccf64ca18122ba83f15f580f
+INVOCATION_ID = 1893a532a24844f4a715467943466219
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -102,6 +102,8 @@ LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:
 XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
+# environment
+GIO_LAUNCHED_DESKTOP_FILE_PID = 6603
 # automatic
 %F = $(notdir $%)
 # environment
@@ -113,7 +115,7 @@ PWD = /home/hari/go/src/github.com/hariprathap-hp/backend_masterclass
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 2783
+SSH_AGENT_PID = 5534
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -201,6 +203,8 @@ GDK_BACKEND = x11
 # automatic
 +F = $(notdir $+)
 # environment
+NO_AT_BRIDGE = 1
+# environment
 HOMEBREW_REPOSITORY = /home/linuxbrew/.linuxbrew/Homebrew
 # environment
 QT_ACCESSIBILITY = 1
@@ -215,11 +219,11 @@ CONDA_PYTHON_EXE = /home/hari/anaconda3/bin/python
 # environment
 GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/659638bc_9ff5_4269_b5ff_b1affba4949d
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/c88d4b9d_5445_473d_b96d_b35e90692fcf
 # automatic
 ^F = $(notdir $^)
 # environment
-GNOME_TERMINAL_SERVICE = :1.111
+GNOME_TERMINAL_SERVICE = :1.248
 # default
 SUFFIXES := 
 # environment
@@ -239,11 +243,11 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 31560
+VSCODE_PID = 6603
 # environment
 _CE_CONDA = 
 # variable set hash-table stats:
-# Load=115/1024=11%, Rehash=0, Collisions=16/140=11%
+# Load=117/1024=11%, Rehash=0, Collisions=18/142=13%
 
 # Pattern-specific Variable Values
 
@@ -276,13 +280,13 @@ all:
 #  File does not exist.
 #  File has not been updated.
 
+ 
 migratedown1:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 25):
- 
 	migrate -path db/migration -database "$(DB_URL)" -verbose down 1
 
 .PHONY: postgres createdb dropdb sqlc test server mock migrateup migratedown migrateup1 migratedown1
@@ -301,7 +305,7 @@ sqlc:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-25 12:34:02.184217585
+#  Last modified 2022-08-25 19:34:26.684396068
 #  File has been updated.
 #  Successfully updated.
 
@@ -389,6 +393,6 @@ mock:
 # strcache performance: lookups = 69 / hit rate = 39%
 # hash-table stats:
 # Load=42/8192=1%, Rehash=0, Collisions=1/69=1%
-# Finished Make data base on Thu Aug 25 17:49:41 2022
+# Finished Make data base on Tue Sep  6 16:46:53 2022
 
  
